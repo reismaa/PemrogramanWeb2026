@@ -1,4 +1,3 @@
 document.addEventListener("DOMContentLoaded", function () {
-      muatDaftarData("../data/buku.json", ["judul", "pengarang", "tahun", "stok"]);
-  });
-  
+    muatDaftarData("../data/buku.json", ["judul", "pengarang", "tahun", "stok", "kategori"]);
+});
