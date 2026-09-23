@@ -237,14 +237,21 @@ footer {
     }
 
     header nav {
-        display: none;
         width: 100%;
         order: 3;
-        margin-top: 1rem;
+        /* Latihan 8.4 no.2: display:none tidak bisa dianimasikan,
+        jadi dipakai max-height + opacity supaya bisa transisi halus. */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        margin-top: 0;
+        transition: max-height 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease;
     }
 
     header nav.nav-open {
-        display: block;
+        max-height: 300px;
+        opacity: 1;
+        margin-top: 1rem;
     }
 
     header nav ul {
